@@ -17,9 +17,7 @@ const StyledNavLink = styled(NavLink)`
     font-weight: 500;
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
-    @media (max-width: 700px) {
-      font-size: 1.4rem;
-    }
+
   }
 
   &:hover,
@@ -34,9 +32,7 @@ const StyledNavLink = styled(NavLink)`
   & span {
     color: ${blueShade1};
     transition: all 0.3s;
-    @media (max-width: 700px) {
-      width: 2rem;
-    }
+ 
   }
 
   &:hover span,
@@ -44,8 +40,18 @@ const StyledNavLink = styled(NavLink)`
   &.active:link span,
   &.active:visited span {
     color: ${blueShade3};
-    @media (max-width: 700px) {
-      width: 2rem;
+
+  }
+
+  @media (max-width: 700px) {
+    &:link {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+    @media (max-width: 400px) {
+    &:link {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.6rem;
     }
   }
 `;
